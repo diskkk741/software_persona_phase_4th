@@ -1,17 +1,87 @@
-# mini_katalog
+# Mini Katalog Uygulaması (Flutter)
 
-A new Flutter project.
+## Proje Tanımı
 
-## Getting Started
+Bu proje, Flutter haftalık eğitim süreci kapsamında geliştirilen temel seviyede bir mobil uygulamadır. Amaç; Flutter kullanarak widget yapısını, sayfa geçişlerini, veri modelleme mantığını ve basit state yönetimini uygulamalı olarak öğrenmektir.
 
-This project is a starting point for a Flutter application.
+Uygulama, ürün verilerini yerel bir JSON dosyasından okuyarak dinamik şekilde listeleyen ve basit bir sepet simülasyonu içeren bir “Mini Katalog” uygulamasıdır.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Kullanılan Teknolojiler
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter SDK
+- Dart
+- Material Design (material.dart)
+- Android Emulator
+- Visual Studio Code
+
+Ekstra paket kullanılmamıştır. Uygulama yalnızca Flutter’ın temel bileşenleri ile geliştirilmiştir.
+
+---
+
+## Uygulama Özellikleri
+
+- JSON dosyasından ürün verisi okuma
+- Model sınıfı ile veri mapleme (fromJson)
+- GridView ile kart tabanlı ürün listeleme
+- Ürün arama ve filtreleme
+- Ürün detay sayfası
+- Navigator.push / pop ile sayfa geçişi
+- Route argument ile veri taşıma
+- Sepete ürün ekleme
+- Aynı üründe adet artırma (quantity mantığı)
+- Sepette toplam tutar hesaplama
+- AppBar üzerinde sepet badge gösterimi
+- Basit UI tema düzenlemesi
+
+---
+
+## Proje Yapısı
+
+lib/
+ ├── main.dart
+ ├── models/
+ │    ├── product.dart
+ │    └── cart_item.dart
+ ├── pages/
+ │    ├── product_detail_page.dart
+ │    └── cart_page.dart
+ └── utils/
+      └── format.dart
+
+- `models/` klasörü veri modellerini içerir.
+- `pages/` klasörü ekran bileşenlerini içerir.
+- `utils/` yardımcı fonksiyonları içerir.
+- `assets/` klasöründe JSON ve görseller yer almaktadır.
+
+---
+
+## Çalıştırma Talimatı
+
+Projeyi çalıştırmak için:
+
+flutter pub get
+flutter run
+
+Android Emulator veya fiziksel cihaz bağlı olmalıdır.
+
+---
+
+## Öğrenme Kazanımları
+
+Bu proje ile:
+
+- Flutter widget mimarisi kavranmıştır.
+- Stateless ve Stateful widget farkı uygulanmıştır.
+- Navigator ile sayfa geçişleri gerçekleştirilmiştir.
+- JSON veri yapısı ile modelleme yapılmıştır.
+- GridView ve dinamik listeleme uygulanmıştır.
+- Basit state yönetimi ile sepet simülasyonu geliştirilmiştir.
+- Mobil uygulama klasör yapısı ve asset yönetimi öğrenilmiştir.
+
+---
+
+## Not
+
+Bu proje eğitim amaçlı geliştirilmiştir. Gerçek bir e-ticaret altyapısı veya ödeme sistemi içermez. Sepet işlemleri simülasyon niteliğindedir.
